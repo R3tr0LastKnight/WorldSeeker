@@ -199,7 +199,7 @@ app.get("/api/user-places", (req, res) => {
   });
 });
 
-app.get("/places/:id", async (req, res) => {
+app.get("/api/places/:id", async (req, res) => {
   mongoose.connect(process.env.MONOG_URL);
   const { id } = req.params;
   res.json(await Place.findById(id));
