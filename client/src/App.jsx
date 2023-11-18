@@ -13,7 +13,7 @@ import PlacePage from "./pages/PlacePage";
 import BookingsPage from "./pages/BookingsPage";
 import BookingPage from "./pages/BookingPage";
 
-axios.defaults.baseURL = process.env.API_BASE_URL;
+axios.defaults.baseURL = "https://world-seeker.vercel.app/api";
 // axios.defaults.baseURL = "https://worldseekerbackend.onrender.com";
 axios.defaults.withCredentials = true;
 
