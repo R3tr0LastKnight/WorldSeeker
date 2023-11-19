@@ -10,7 +10,7 @@ const PlaceImg = ({ place, className = null }) => {
   }
   return (
     <div>
-      <Image src={place.photos?.[0]} alt="" />
+      <Image src={place.photos?.[0]} alt="" className="rounded-md" />
     </div>
   );
 };

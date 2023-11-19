@@ -31,7 +31,7 @@ const BookingWidget = ({ place }) => {
       price: numberOfNights * place.price,
     });
     const bookingId = response.data._id;
-    setRedirect(`/accounts/bookings/${bookingId}`);
+    setRedirect(`/account/bookings`);
   };
 
   if (redirect) {
@@ -51,9 +51,9 @@ const BookingWidget = ({ place }) => {
         <div className="text-2xl text-center pb-1">
           Price : ${place.price} / night
         </div>
-        <div className="border border-gray-400 rounded-2xl mb-2 shadow-xl">
+        <div className="border border-gray-400 rounded-2xl mb-2 shadow-xl text-xs md:text-base">
           <div className="flex">
-            <div className="py-1 px-2">
+            <div className="py-1 px-2 ">
               <label>Check In :</label>
               <input
                 type="date"
@@ -117,14 +117,15 @@ const BookingWidget = ({ place }) => {
             </div>
           )}
         </div>
+        {numberOfNights > 0 && (
+          <div className="flex gap-2 p-4 py-3">
+            <div className="font-bold">To pay :</div>
+            <span>$ {numberOfNights * place.price * numberOfGuests}/-</span>
+          </div>
+        )}
         <button className="primary" onClick={bookThisPlace}>
           Book This Place
         </button>
-        {numberOfNights > 0 && (
-          <>
-            <span>{numberOfNights * place.price * numberOfGuests}</span>
-          </>
-        )}
       </div>
     </div>
   );

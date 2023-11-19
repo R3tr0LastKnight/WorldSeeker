@@ -41,7 +41,7 @@ const PlacesPage = () => {
           places.map((place) => (
             <Link
               to={"/account/places/" + place._id}
-              className="bg-gray-300 p-4 my-2 rounded-2xl flex items-center gap-4 cursor-pointer"
+              className="bg-gray-300 p-4 my-2 rounded-2xl flex flex-col md:flex-row items-center gap-4 cursor-pointer"
             >
               <div className="flex items-center w-48 h-32 overflow-hidden shrink-0">
                 <PlaceImg place={place} />

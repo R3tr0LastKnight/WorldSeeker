@@ -63,7 +63,7 @@ const PlacePage = () => {
     );
   }
   return (
-    <div className="mt-6 bg-gray-100 ">
+    <div className="mt-6 ">
       <h1 className="text-4xl">{place.title}</h1>
       <a
         target="_blank"

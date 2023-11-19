@@ -23,12 +23,12 @@ const IndexPage = () => {
           return (
             <Link
               to={"/place/" + place._id}
-              className="w-[90%] justify-center my-2"
+              className="w-[100%] justify-center my-2"
             >
-              <div className=" rounded-2xl flex mb-2 h-[70%]">
+              <div className=" rounded-2xl flex justify-center md:justify-start mb-2 h-[70%]">
                 {place.photos?.[0] && (
                   <Image
-                    className="rounded-2xl object-cover  "
+                    className="rounded-2xl object-cover md:w-[90%]  "
                     src={place.photos?.[0]}
                     alt=""
                   />
