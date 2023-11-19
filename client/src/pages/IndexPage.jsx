@@ -35,9 +35,9 @@ const IndexPage = () => {
                 )}
               </div>
 
-              <h2 className=" font-bold leading-4">{place.title}</h2>
-              <h3 className="text-sm">{place.address}</h3>
-              <div className="mt-1">
+              <h2 className=" font-bold leading-4 ml-2">{place.title}</h2>
+              <h3 className="text-sm ml-2">{place.address}</h3>
+              <div className="mt-1 ml-2">
                 <span className="font-bold">${place.price}</span> per Night
               </div>
             </Link>
