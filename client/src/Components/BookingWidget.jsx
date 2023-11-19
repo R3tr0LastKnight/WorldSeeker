@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { differenceInCalendarDays } from "date-fns";
-import axios from "axios";
+// import axios from "axios";
 import { Navigate } from "react-router";
 import { UserContext } from "../userContext";
 
@@ -21,16 +21,16 @@ const BookingWidget = ({ place }) => {
   }, [user]);
 
   const bookThisPlace = async () => {
-    const response = await axios.post("/bookings", {
-      checkIn,
-      checkOut,
-      numberOfGuests,
-      name,
-      phone,
-      place: place._id,
-      price: numberOfNights * place.price,
-    });
-    const bookingId = response.data._id;
+    // const response = await axios.post("/bookings", {
+    //   checkIn,
+    //   checkOut,
+    //   numberOfGuests,
+    //   name,
+    //   phone,
+    //   place: place._id,
+    //   price: numberOfNights * place.price,
+    // });
+    // const bookingId = response.data._id;
     setRedirect(`/account/bookings`);
   };
 
